@@ -1,0 +1,221 @@
+# ==================================
+# RPi-GPIO-Hub Project .gitignore
+# ==================================
+
+# ============ 빌드 결과물 ============
+# 실행 파일
+*_exe
+
+# 공유 라이브러리
+exec/lib/*.so
+exec/lib/*.a
+
+# 오브젝트 파일
+*.o
+*.ko
+*.obj
+*.elf
+
+# 링커 출력
+*.ilk
+*.map
+*.exp
+
+# 정적 라이브러리
+*.lib
+*.a
+*.la
+*.lo
+
+# 동적 라이브러리
+*.so
+*.so.*
+*.dylib
+*.dll
+
+# ============ 컴파일러 및 빌드 도구 ============
+# GCC 관련
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# CMake 관련
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile.bak
+*.cmake
+!CMakeLists.txt
+
+# ============ 디버깅 ============
+# 코어 덤프
+core
+core.*
+vgcore.*
+
+# GDB 관련
+.gdb_history
+peda-session-*.txt
+
+# Valgrind
+*.log
+vgcore.*
+
+# ============ 에디터 및 IDE ============
+# Vi/Vim
+*.swp
+*.swo
+*~
+.*.sw?
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Eclipse
+.cproject
+.project
+.settings/
+
+# CLion / JetBrains
+.idea/
+cmake-build-*/
+
+# ============ 운영체제 ============
+# Linux
+.directory
+.Trash-*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ============ 임시 파일 ============
+# 일반 임시 파일
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+
+# 로그 파일
+*.log
+logs/
+*.pid
+
+# ============ 문서 임시 파일 ============
+# PDF 편집 임시
+*.pdf~
+
+# LibreOffice/OpenOffice
+.~lock.*
+
+# ============ 압축 파일 ============
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.bz2
+*.xz
+
+# ============ 테스트 및 디버그 ============
+# 테스트 출력
+test_output/
+*.test
+
+# Coverage
+*.gcda
+*.gcno
+*.gcov
+
+# ============ 프로젝트 특정 ============
+# 사용자 설정 (IP 주소 등)
+config.local
+*.local
+
+# 실행 중 생성되는 파일
+*.pid
+*.sock
+
+# 데이터베이스 (혹시 추가될 경우)
+*.db
+*.sqlite
+*.sqlite3
+
+# ============ Git 관련 ============
+# Git 패치
+*.orig
+*.rej
+*.patch
+
+# ============ 보안 ============
+# 개인 키 및 인증서
+*.key
+*.pem
+*.crt
+*.cer
+*.p12
+*.pfx
+
+# 환경 변수
+.env
+.env.local
+
+# ============ 문서 빌드 결과 (필요시) ============
+# Doxygen
+docs/html/
+docs/latex/
+Doxyfile.bak
+
+# ============ 예외 (추적해야 할 파일) ============
+# README와 문서는 추적
+!README.md
+!docs/*.pdf
+!docs/*.txt
+
+# Makefile은 추적
+!Makefile
+!*/Makefile
+
+# 회로도 이미지는 추적
+!misc/*.png
+!misc/*.jpg
+!misc/*.svg
+
+# 헤더 파일은 추적
+!*.h
+
+# 소스 파일은 추적
+!*.c
+
+# ============ 디렉토리 구조 유지 ============
+# 빈 디렉토리 유지용 (exec 디렉토리 구조)
+!exec/
+!exec/server/
+!exec/client/
+!exec/lib/
+exec/server/.gitkeep
+exec/client/.gitkeep
+exec/lib/.gitkeep
